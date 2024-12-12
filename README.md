@@ -1,46 +1,33 @@
-# Procesamiento del Lenguaje natural
-Este repositorio contiene el material de clases (presentaciones, ejercicios y notebooks) para NLP (CEIA - FIUBA)
+![image](https://github.com/hernancontigiani/ceia_memorias_especializacion/raw/master/Figures/logoFIUBA.jpg)
 
-## Contenido
+#  PNL - Entrega final de desafios 
 
-### [Clase 1](clase_1/README.md) 
-* Introducción a NLP (Natural Language Processing)
-* Vectorización de documentos
+A lo largo de la cursada de la materia, pudimos explorar distintos métodos y librerías de procesamiento de texto especializados en machine learning para resolver distintos problemas y requerimientos del mercado actual tales como bots conversacionales, traductores, y summarizers.
 
-### [Clase 2](clase_2/README.md)
-* Preprocesamiento de texto
-* Librerías de preprocesamiento para NLP
-* Information-retrieval bots
+A continuacion destilamos un poco más los desafíos junto a una breve descripcion de cada uno y sus links de referencia:
 
-### [Clase 3](clase_3/README.md)
-* Word embeddings, CBOW y SkipGRAM
-* Representación de palabras
-
-### [Clase 4](clase_4/README.md)
-* Redes recurrentes (RNN)
-* Problemas de secuencia
-* Estimación de próxima palabra
-
-### [Clase 5](clase_5/README.md)
-* Redes LSTM
-* Análisis de sentimiento (sentiment analysis)
+### Desafío 1
+Se exploró el uso de vectorizadores de texto como TfidfVectorizer y CountVectorizer, aplicamos Naïve Bayes con MultinomialNB y ComplementNB con el dataset de '20 newsgroups'. 
     
-### [Clase 6](clase_6/README.md)
-* Modelos Seq2Seq
-* Bots conversacionales y traductores
+Link del desafio: https://github.com/christophcharaf/procesamiento_lenguaje_natural/blob/main/clase_1/ejercicios/Desafio_1.ipynb
 
-### [Clase 7](clase_7/README.md)
-* Celdas con Attention
-* Transformers
-* BERT y ELMo
-* Fine tuning
+### Desafío 2
+Utilizamos embeddings de Gensim para generar los textos en base al famoso libro de Moby Dick, ejercicio en el cual identificamos una forma muy precaria de 'prediccion' de palabras proximas asi como tambien visualizamos los terminos vecinos dentro de nuestro corpus generado.
 
-### [Clase 8](clase_8/README.md)
-* Cierre del curso
-* Deployment de servicio NLP
-* Flask, APIs
-* Docker y Tensorflow Serving (TFX)
+Link del desafio: https://github.com/christophcharaf/procesamiento_lenguaje_natural/blob/main/clase_2/jupyter_notebooks/Desafio%202.ipynb
 
-# Profesores
-:octocat: Dr. Rodrigo Cardenas Szigety (2022-actual)\
-:octocat: Esp. Ing. Hernán Contigiani (2021-2022)
+### Desafío 3
+Exploramos el uso de una arquitectura de redes neuronales con capas LSTM, lo cual nos permite generar predicciones de secuencias en base a contexto.
+
+Para este fin utilizamos como corpus un album de musica rock de Avenged Sevenfold, en el cual evaluamos la prediccion del modelo utilizando tecnicas como beam search determinisco y estocástico, asi como tambien greedy search.
+
+Link del desafío: https://github.com/christophcharaf/procesamiento_lenguaje_natural/blob/main/clase_3/ejercicios/desafio_3/desafio_3.ipynb
+
+
+### Desafío 4
+Se desarrolló un BOT para responder preguntas de los usuarios. Se utilizaron embeddings de GloVe y se implementaron dos capas LSTM para el encoder y el decoder, además de una capa densa en la salida.
+
+Si bien el desempeño del modelo no fue muy bueno, se intentó demostrar la funcionalidad basica y modularidad en cuanto a estructura que puede llegar a tener un modelo como este.
+
+Link al desafio:
+https://github.com/christophcharaf/procesamiento_lenguaje_natural/blob/06319bc92458da7d6ed45fff37734eb9afd12a6d/clase_6/ejercicios/6_bot_qa.ipynb
